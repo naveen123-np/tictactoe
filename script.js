@@ -71,7 +71,7 @@ function checkWinner() {
           box.disabled = true;
         }
       }
-    else { if ( value1 == value2 && value2 == value3 && value3 == value1 && boxs[0].innerText!=='' && boxs[1].innerText!=='' && boxs[2].innerText!=='' && boxs[3].innerText!=='' && boxs[4].innerText!=='' && boxs[5].innerText!=='' && boxs[6].innerText!=='' && boxs[7].innerText!==''  && boxs[8].innerText!=='') {
+    else { if ( value1 !== value2 && value2 !== value3 && value3 !== value1 && boxs[0].innerText!=='' && boxs[1].innerText!=='' && boxs[2].innerText!=='' && boxs[3].innerText!=='' && boxs[4].innerText!=='' && boxs[5].innerText!=='' && boxs[6].innerText!=='' && boxs[7].innerText!==''  && boxs[8].innerText!=='') {
     
        displayWinner.style.display="block";
         displayWinner.innerText =  ` Game Draw No one Wins  !! 🚀🚀🚀`;;
