@@ -57,7 +57,7 @@ function checkWinner() {
     let value2 = boxs[winnerPattern[a][1]].innerText;
     let value3 = boxs[winnerPattern[a][2]].innerText;
     if (value1 !== "" && value2 !== "" && value3 !== "") {
-      if (value1 == value2 && value2 == value3) {
+      if (value1 == value2 && value2 == value3 && value3 == value1) {
         console.log(
           winnerPattern[a][0],
           winnerPattern[a][1],
