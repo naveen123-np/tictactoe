@@ -63,7 +63,7 @@ function checkWinner() {
         );
         gameOverTune.play();
         img.src = "dancing.gif";
-        displayWinner.visibility="visible";
+        displayWinner.Style.visibility="visible";
         displayWinner.innerText = ` Congratulation ${turn} won the Game !! 🚀🚀🚀`;
       }
     }
