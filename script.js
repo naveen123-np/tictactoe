@@ -69,8 +69,9 @@ function checkWinner() {
       }
     }
     else if (boxs[0].innerText!=='' && boxs[1].innerText!=='' && boxs[2].innerText!=='' && boxs[3].innerText!=='' && boxs[4].innerText!=='' && boxs[5].innerText!=='' && boxs[6].innerText!=='' && boxs[7].innerText!==''  && boxs[8].innerText!=='') {
-       let  message = ` Game Draw No one Wins  !! 🚀🚀🚀`;
-        displayWinner.innerText = message;
+    
+       displayWinner.style.display="block";
+        displayWinner.innerText =  ` Game Draw No one Wins  !! 🚀🚀🚀`;;
       }
   }
 }
