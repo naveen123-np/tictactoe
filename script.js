@@ -46,6 +46,7 @@ resetbtn.addEventListener("click", () => {
     img.src = "dancing2.gif";
     displayWinner.innerText = "";
     turn="X";
+    displayWinner.style.display="none";
   }
 });
 
