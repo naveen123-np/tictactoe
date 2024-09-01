@@ -68,5 +68,8 @@ function checkWinner() {
         displayWinner.innerText = ` Congratulation ${turn} won the Game !! 🚀🚀🚀`;
       }
     }
+    else if(boxs.display=true){
+        displayWinner.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
+      }
   }
 }
