@@ -69,6 +69,7 @@ img{
     background-color: lightsalmon;
     text-align: center;
     line-height: 2.5;
+    visibility:"hidden";
 }
 @media (max-width:640px) {
     main{
