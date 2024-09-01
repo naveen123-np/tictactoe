@@ -15,7 +15,7 @@ const winnerPattern = [
   [2, 5, 8],
   [3, 4, 5],
   [6, 7, 8],
-  [6, 3, 6],
+  [6, 3, 0],
 ];
 
 //setvalue of button
