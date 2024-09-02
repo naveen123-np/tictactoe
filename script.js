@@ -101,8 +101,7 @@ function drawGame() {
       }
     if (isDraw) {
       isgameOver = true;
-      console.log("jai mata di bhailog");
-      drawDisplay.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
+      displayWinner.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
     }
   }
 }
