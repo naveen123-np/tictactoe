@@ -54,7 +54,7 @@ resetbtn.addEventListener("click", () => {
     displayWinner.style.display="none";
     line.style.visibility="hidden";
    displayDraw.innerText = "";
-    displayDraw.style.display="none";
+    displayDraw.style.visibility="hidden";
   }
 });
 
@@ -104,7 +104,7 @@ function drawGame() {
       }
     if (isDraw) {
       isgameOver = true;
-      displayDraw.style.display="block";
+      displayDraw.style.visibility="visible";
       displayDraw.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
     }
   }
