@@ -3,6 +3,7 @@ const turnTune = new Audio("turn.wav");
 const gameOverTune = new Audio("gameover.wav");
 const img = document.querySelector(".img");
 const resetbtn = document.querySelector(".reset");
+ const line = document.querySelector(".line")
 const displayWinner = document.querySelector(".winner-display");
 console.log(boxs);
 let turn = "X";
@@ -68,7 +69,7 @@ function checkWinner() {
         img.src = "dancing.gif";
         displayWinner.style.display="block";
         displayWinner.innerText = ` Congratulation ${turn} won the Game !! 🚀🚀🚀`;
-          const line = document.querySelector(".line")
+         
         line.style.visibility="visible";
         line.style.transform=`translate(${winnerPattern[a][3]}px ,${winnerPattern[a][4]}px) rotate(${winnerPattern[a][5]}deg)`
         for (const box of boxs) {
