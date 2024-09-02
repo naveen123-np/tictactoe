@@ -101,7 +101,8 @@ function drawGame() {
       }
     if (isDraw) {
       isgameOver = true;
-      displayWinner.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
+     document.querySelector(".draw-display");
+      displayDraw.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
     }
   }
 }
