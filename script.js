@@ -5,6 +5,7 @@ const img = document.querySelector(".img");
 const resetbtn = document.querySelector(".reset");
  const line = document.querySelector(".line")
 const displayWinner = document.querySelector(".winner-display");
+let isgameOver = false;
 console.log(boxs);
 let turn = "X";
 
@@ -27,12 +28,14 @@ for (let a = 0; a < boxs.length; a++) {
       boxs[a].innerText = turn;
       turnTune.play();
       checkWinner();
+     drawGame();
       turn = "O";
       boxs[a].removeEventListener("click", () => {});
     } else {
       boxs[a].innerText = turn;
       turnTune.play();
       checkWinner();
+     drawGame();
       turn = "X";
     }
     boxs[a].disabled = true;
@@ -75,9 +78,14 @@ function checkWinner() {
         for (const box of boxs) {
           box.disabled = true;
       }
-   
+   isgameOver = true;
          }
-    } else if ( value1 !== value2 && value2 !== value3){ 
+    } 
+    }
+  }
+function drawGame() {
+  if (!isgameOver) {
+    let isDraw = false;
       if (
         boxs[0].innerText !== "" &&
         boxs[1].innerText !== "" &&
@@ -89,9 +97,12 @@ function checkWinner() {
         boxs[7].innerText !== "" &&
         boxs[8].innerText !== ""
       ) {
-        console.log("jai mata di bhailog")
-        DisplayWinner.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
+        isDraw = true;
       }
+    if (isDraw) {
+      isgameOver = true;
+      console.log("jai mata di bhailog");
+      drawDisplay.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
     }
   }
 }
