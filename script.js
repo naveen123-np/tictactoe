@@ -105,7 +105,7 @@ function drawGame() {
        console.log("jai mata di condition check")
       }
    console.log(isDraw)
-    if (isDraw) {
+    if (isDraw==true) {
       isgameOver = true;
      let displayDraw = document.querySelector(".draw-display");
       displayDraw.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
