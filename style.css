@@ -24,6 +24,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap:30px;
 }
 .container{
     height: fit-content;
