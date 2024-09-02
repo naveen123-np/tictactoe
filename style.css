@@ -33,6 +33,7 @@ main{
     grid-template-rows: 0fr;
     border:none;
     background-color: #fff;
+    position:relative;
 }
 
 .box{
@@ -70,6 +71,14 @@ img{
     text-align: center;
     line-height: 2.5;
     display:none;
+}
+.line{
+    height: 275px;
+    width: 5px;
+    position: absolute;
+   transform: rotate(45deg);
+    background-color: lightslategray;
+    visibility: hidden;
 }
 @media (max-width:640px) {
     main{
