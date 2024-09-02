@@ -54,6 +54,7 @@ resetbtn.addEventListener("click", () => {
     displayWinner.style.display="none";
     line.style.visibility="hidden";
     displayDraw.style.display="none";
+   displayDraw.innerText = "";
   }
 });
 
