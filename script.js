@@ -56,6 +56,7 @@ resetbtn.addEventListener("click", () => {
    let displayDraw = document.querySelector(".draw-display");
    displayDraw.innerText = "";
     displayDraw.style.visibility="hidden";
+   isgameOver =false;
   }
 });
 
