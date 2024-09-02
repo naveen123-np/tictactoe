@@ -80,6 +80,7 @@ img{
     background-color: lightsalmon;
     text-align: center;
     line-height: 2.5;
+    display:none;
 }
 .line{
     height: 275px;
