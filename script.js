@@ -88,21 +88,23 @@ function checkWinner() {
     }
   }
 function drawGame() {
+ console.log("jai mata di")
   if (!isgameOver) {
-    let isDraw = false;
+    let isDraw = true;
       if (
-        boxs[0].innerText !== "" &&
-        boxs[1].innerText !== "" &&
-        boxs[2].innerText !== "" &&
-        boxs[3].innerText !== "" &&
-        boxs[4].innerText !== "" &&
-        boxs[5].innerText !== "" &&
-        boxs[6].innerText !== "" &&
-        boxs[7].innerText !== "" &&
-        boxs[8].innerText !== ""
+          boxs[0].innerText == "" ||
+        boxs[1].innerText == "" ||
+        boxs[2].innerText == "" ||
+        boxs[3].innerText == "" ||
+        boxs[4].innerText == "" ||
+        boxs[6].innerText == "" ||
+        boxs[7].innerText == "" ||
+        boxs[8].innerText == ""
       ) {
-        isDraw = true;
+        isDraw = false;
+       console.log("jai mata di condition check")
       }
+   console.log(isDraw)
     if (isDraw) {
       isgameOver = true;
      let displayDraw = document.querySelector(".draw-display");
