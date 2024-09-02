@@ -73,6 +73,14 @@ img{
     line-height: 2.5;
     display:none;
 }
+.draw-display{
+    height: 60px;
+    width: 50vw;
+    border-radius: 10px;
+    background-color: lightsalmon;
+    text-align: center;
+    line-height: 2.5;
+}
 .line{
     height: 275px;
     width: 5px;
@@ -86,6 +94,10 @@ img{
         flex-direction: column;
     }
 .winner-display{
+    line-height: 2;
+    width: 60vw;
+}
+    .draw-display{
     line-height: 2;
     width: 60vw;
 }
