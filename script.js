@@ -53,8 +53,8 @@ resetbtn.addEventListener("click", () => {
     turn="X";
     displayWinner.style.display="none";
     line.style.visibility="hidden";
-    displayDraw.style.display="none";
    displayDraw.innerText = "";
+    displayDraw.style.display="none";
   }
 });
 
