@@ -5,6 +5,7 @@ const img = document.querySelector(".img");
 const resetbtn = document.querySelector(".reset");
  const line = document.querySelector(".line")
 const displayWinner = document.querySelector(".winner-display");
+let displayDraw = document.querySelector(".draw-display");
 let isgameOver = false;
 console.log(boxs);
 let turn = "X";
@@ -52,6 +53,7 @@ resetbtn.addEventListener("click", () => {
     turn="X";
     displayWinner.style.display="none";
     line.style.visibility="hidden";
+    displayDraw.style.display="none";
   }
 });
 
@@ -101,7 +103,6 @@ function drawGame() {
       }
     if (isDraw) {
       isgameOver = true;
-    let displayDraw = document.querySelector(".draw-display");
       displayDraw.style.display="block";
       displayDraw.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
     }
