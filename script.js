@@ -71,9 +71,9 @@ function checkWinner() {
           box.disabled = true;
       }
    
-         }else {
-        if(
-          value1 !== value2 && value2 !== value3 &&
+         }
+    } else if ( value1 !== value2 && value2 !== value3){ 
+      if (
         boxs[0].innerText !== "" &&
         boxs[1].innerText !== "" &&
         boxs[2].innerText !== "" &&
@@ -83,12 +83,10 @@ function checkWinner() {
         boxs[6].innerText !== "" &&
         boxs[7].innerText !== "" &&
         boxs[8].innerText !== ""
-      )
-      {
-        
-        displayWinner.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
+      ) {
+        console.log("jai mata di bhailog")
+        drawDisplay.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
       }
-    }
     }
   }
 }
