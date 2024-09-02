@@ -8,14 +8,14 @@ console.log(boxs);
 let turn = "X";
 
 const winnerPattern = [
-  [0, 1, 2],
-  [0, 4, 8],
-  [1, 4, 7],
-  [2, 4, 6],
-  [2, 5, 8],
-  [3, 4, 5],
-  [6, 7, 8],
-  [6, 3, 0],
+  [0, 1, 2 , 150,-100,270],
+  [0, 4, 8,138,8,316],
+  [1, 4, 7,140,15,0],
+  [2, 4, 6,147,8,44],
+  [2, 5, 8,245,15,0],
+  [3, 4, 5,150,0,270],
+  [6, 7, 8,150,106,270],
+  [6, 3, 0,47,15,0],
 ];
 
 //setvalue of button
@@ -67,6 +67,9 @@ function checkWinner() {
         img.src = "dancing.gif";
         displayWinner.style.display="block";
         displayWinner.innerText = ` Congratulation ${turn} won the Game !! 🚀🚀🚀`;
+          const line = document.querySelector(".line")
+        line.style.visibility="visible";
+        line.style.transform=`translate(${winnerPattern[a][3]}px ,${winnerPattern[a][4]}px) rotate(${winnerPattern[a][5]}deg)`
         for (const box of boxs) {
           box.disabled = true;
       }
@@ -85,7 +88,7 @@ function checkWinner() {
         boxs[8].innerText !== ""
       ) {
         console.log("jai mata di bhailog")
-        drawDisplay.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
+        DisplayWinner.innerText = ` Game Draw No one Wins  !! 🚀🚀🚀`;
       }
     }
   }
