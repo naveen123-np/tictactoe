@@ -22,6 +22,10 @@ const winnerPattern = [
   [6, 7, 8,150,106,270],
   [6, 3, 0,47,15,0],
 ];
+autoplay.addEventListener("click", () => {
+  userPlay = true;
+  console.log("autoplay is clicked");
+});
 
 //setvalue of button
 for (let a = 0; a < boxs.length; a++) {
