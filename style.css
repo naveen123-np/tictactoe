@@ -90,6 +90,19 @@ img{
     background-color: lightslategray;
     visibility: hidden;
 }
+.default-button {
+    display: flex;
+    gap: 50px;
+}
+
+.autoplay {
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+
+}
 @media (max-width:640px) {
     main{
         flex-direction: column;
