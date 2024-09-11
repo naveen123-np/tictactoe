@@ -33,7 +33,7 @@ for (let a = 0; a < boxs.length; a++) {
       checkWinner();
      drawGame();
       turn = "O";
-      boxs[a].removeEventListener("click", () => {});
+    
     } else {
       boxs[a].innerText = turn;
       turnTune.play();
@@ -65,8 +65,9 @@ function autoplayGame() {
     console.log(randomNo, disabledBox[randomNo], disabledBox.length);
     boxs[disabledBox[randomNo]].innerText = turn === "O" ? "O" : "X";
     turn="X";
+   userPlay = true;
   }
-  userPlay = true;
+  
 }
 // reset option
 resetbtn.addEventListener("click", () => {
