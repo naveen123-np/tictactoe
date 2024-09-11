@@ -5,6 +5,8 @@ const img = document.querySelector(".img");
 const resetbtn = document.querySelector(".reset");
  const line = document.querySelector(".line")
 const displayWinner = document.querySelector(".winner-display");
+const autoplay = document.querySelector(".autoplay");
+let userPlay = false;
 
 let isgameOver = false;
 console.log(boxs);
@@ -40,9 +42,32 @@ for (let a = 0; a < boxs.length; a++) {
       turn = "X";
     }
     boxs[a].disabled = true;
+     console.log(userPlay);
+      autoplayGame();
   });
+ 
 }
-
+//autoplay
+function autoplayGame() {
+  console.log(userPlay);
+  if (userPlay) {
+    let disabledBox =[];
+    console.log("i am in");
+    for (let a = 0; a < boxs.length; a++) {
+      if (boxs[a].innerText == "") {
+      
+       disabledBox += a;
+        console.log(a);
+      }
+    }
+    console.log(turn)
+    let randomNo = Math.floor(Math.random() * disabledBox.length);
+    console.log(randomNo, disabledBox[randomNo], disabledBox.length);
+    boxs[disabledBox[randomNo]].innerText = turn === "O" ? "O" : "X";
+    turn="X";
+  }
+  userPlay = true;
+}
 // reset option
 resetbtn.addEventListener("click", () => {
   for (const box of boxs) {
@@ -57,6 +82,7 @@ resetbtn.addEventListener("click", () => {
    displayDraw.innerText = "";
     displayDraw.style.visibility="hidden";
    isgameOver =false;
+   userPlay = false;
   }
 });
 
