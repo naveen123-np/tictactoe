@@ -68,6 +68,7 @@ function autoplayGame() {
     let randomNo = Math.floor(Math.random() * disabledBox.length);
     console.log(randomNo, disabledBox[randomNo], disabledBox.length);
     boxs[disabledBox[randomNo]].innerText = turn === "O" ? "O" : "X";
+    checkWinner()
     turn="X";
    userPlay = true;
   }
