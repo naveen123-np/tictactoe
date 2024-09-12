@@ -109,6 +109,7 @@ function checkWinner() {
         img.src = "dancing.gif";
         displayWinner.style.display="block";
         displayWinner.innerText = ` Congratulation ${turn} won the Game !! 🚀🚀🚀`;
+        userPlay = false;
          
         line.style.visibility="visible";
         line.style.transform=`translate(${winnerPattern[a][3]}px ,${winnerPattern[a][4]}px) rotate(${winnerPattern[a][5]}deg)`
