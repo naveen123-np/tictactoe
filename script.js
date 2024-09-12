@@ -37,6 +37,7 @@ for (let a = 0; a < boxs.length; a++) {
       checkWinner();
      drawGame();
       turn = "O";
+       boxs[a].disabled = true;
     
     } else {
       boxs[a].innerText = turn;
@@ -44,8 +45,9 @@ for (let a = 0; a < boxs.length; a++) {
       checkWinner();
      drawGame();
       turn = "X";
+       boxs[a].disabled = true;
     }
-    boxs[a].disabled = true;
+  
      console.log(userPlay);
       autoplayGame();
   });
@@ -68,6 +70,7 @@ function autoplayGame() {
     let randomNo = Math.floor(Math.random() * disabledBox.length);
     console.log(randomNo, disabledBox[randomNo], disabledBox.length);
     boxs[disabledBox[randomNo]].innerText = turn === "O" ? "O" : "X";
+    boxs[disabledBox[randomNo]].disabled=true;
     checkWinner()
     turn="X";
    userPlay = true;
